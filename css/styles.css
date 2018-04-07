@@ -869,3 +869,7 @@ h1.page-header {
 .none-decoration{
 	text-decoration: none !important;
 }
+
+.margin-4{
+	margin: 4px;
+}
