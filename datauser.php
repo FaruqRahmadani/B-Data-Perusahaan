@@ -31,9 +31,6 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?php
-								echo mysqli_num_rows($query);
-							?>
 							<?php foreach ($query as $Index=>$Data): ?>
 								<tr>
 									<td><?= $Index+1 ?></td>
@@ -42,7 +39,12 @@
 									<td><?= $Data['alamat'] ?></td>
 									<td><?= $Data['username'] ?></td>
 									<td>
-										<a href="<?= $Data['id'] ?>">Link</a>
+										<a href="functions/hapusUser.php?id=<?= $Data['id'] ?>" class="none-decoration">
+											<button class="btn-xs btn-info">Edit</button>
+										</a>
+										<a href="functions/hapusUser.php?id=<?= $Data['id'] ?>" class="none-decoration">
+											<button class="btn-xs btn-danger">Hapus</button>
+										</a>
 									</td>
 								</tr>
 							<?php endforeach; ?>

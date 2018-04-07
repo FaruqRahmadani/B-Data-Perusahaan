@@ -12,7 +12,7 @@
     if (!mysqli_num_rows($query)) {
       $query = mysqli_query($connect, "INSERT INTO user (nama, no_telepon, alamat, username, password) VALUES ('$nama','$no_telepon','$alamat','$username','$password')");
 
-      header("Location:..");
+      header("Location:index.php");
     }
 
 	}
