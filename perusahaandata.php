@@ -15,7 +15,7 @@
 		<div class="col-md-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					<a href="/perusahaantambah.php" name="button" class="btn btn-primary">Tambah Data</a>
+					<a href="perusahaantambah.php" name="button" class="btn btn-primary">Tambah Data</a>
 				</div>
 				<div class="panel-body">
 					<table class="table">
