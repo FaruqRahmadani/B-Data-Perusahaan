@@ -34,7 +34,7 @@
   <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <ul class="nav menu">
       <li class="active"><a href="index.html"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
-      <li><a href="dataperusahaan.php"><span class="glyphicon glyphicon-th"></span> Data Perusahaan</a></li>
+      <li><a href="perusahaandata.php"><span class="glyphicon glyphicon-th"></span> Data Perusahaan</a></li>
       <li><a href="userdata.php"><span class="glyphicon glyphicon-th"></span> Data User</a></li>
       <li><a href="widgets.html"><span class="glyphicon glyphicon-th"></span> Widgets</a></li>
       <li><a href="charts.html"><span class="glyphicon glyphicon-stats"></span> Charts</a></li>
