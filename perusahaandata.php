@@ -44,10 +44,10 @@
 									<td><?= $Data['no_telepon'] ?></td>
 									<td><?= $Data['keterangan'] ?></td>
 									<td>
-										<a href="#">
+										<a href="perusahaanedit.php?id=<?= $Data['id'] ?>" class="none-decoration">
 											<button class="btn-xs btn-info">Edit</button>
 										</a>
-										<a href="functions/hapusPerusahaan.php?id=<?= $Data['id'] ?>">
+										<a href="functions/hapusPerusahaan.php?id=<?= $Data['id'] ?>" class="none-decoration">
 											<button class="btn-xs btn-danger">Hapus</button>
 										</a>
 									</td>
