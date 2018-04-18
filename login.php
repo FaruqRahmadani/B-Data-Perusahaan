@@ -1,3 +1,8 @@
+<?php
+	if (isset($_SESSION['id'])) {
+		header("Location:index.php");
+	}
+?>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -13,7 +18,7 @@
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Log in</div>
 				<div class="panel-body">
-					<form role="form">
+					<form role="form" action="functions/submitLogin.php" method="POST">
 						<fieldset>
 							<div class="form-group">
 								<input class="form-control" placeholder="Username" name="username" type="text" autofocus>
@@ -21,7 +26,7 @@
 							<div class="form-group">
 								<input class="form-control" placeholder="Password" name="password" type="password">
 							</div>
-							<button class="btn btn-primary">Login</button>
+							<button class="btn btn-primary" name="submit">Login</button>
 							<a href="register.php" class="btn btn-warning">Register</a>
 						</fieldset>
 					</form>

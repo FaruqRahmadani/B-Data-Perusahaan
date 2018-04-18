@@ -1,3 +1,9 @@
+<?php
+  session_start();
+  if (!isset($_SESSION['id'])) {
+    header("Location:login.php");
+  }
+?>
 <html>
 <head>
   <meta charset="utf-8">
@@ -20,11 +26,11 @@
         <a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
         <ul class="user-menu">
           <li class="dropdown pull-right">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> <?= $_SESSION['nama'] ?> <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
               <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+              <li><a href="functions/logout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
           </li>
         </ul>
