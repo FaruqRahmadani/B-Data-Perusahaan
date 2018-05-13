@@ -1,18 +1,21 @@
 <?php
-	if (isset($_POST['submit'])) {
-		include("connection.php");
+
+		include("../config/connection.php");
+		session_start();
 		$username = $_POST['username'];
 		$password = md5($_POST['password']);
 
     $query = mysqli_query($connect, "SELECT * FROM user WHERE username='$username' AND password='$password'");
-    if (mysqli_num_rows($query)) {
-			$Data = mysqli_fetch_array($query);
-			session_start();
-			$_SESSION['id']   = $Data['id'];
-			$_SESSION['nama'] = $Data['nama'];
-      header("Location:../index.php");
-    }
+    $rowcount = mysqli_num_rows($query);
 
-		header("Location:../login.php");
+    if ($rowcount != 0) {
+  	$_SESSION['username'] = $username;
+  	$_SESSION['password'] = $password;
+  	header("Location:../user/index.php");
 	}
+	else
+	{
+	  	header("Location:../public/login.php");
+	}
+
 ?>

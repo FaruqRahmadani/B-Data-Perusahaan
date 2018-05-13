@@ -1,5 +1,5 @@
 <?php
-  require_once 'connection.php';
+require_once '../config/connection.php';
   $id = $_GET['id'];
   $query = mysqli_query($connect, "SELECT * FROM user WHERE id=$id");
   $data = mysqli_fetch_array($query);
@@ -12,5 +12,5 @@
 
     $query = mysqli_query($connect, "UPDATE user SET nama='$nama', no_telepon='$no_telepon', alamat='$alamat', username='$username', password='$password' WHERE id=$id");
 
-    header('Location: ../userdata.php');
+    header('Location: ../user/dataUser.php');
   }

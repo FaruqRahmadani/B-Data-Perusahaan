@@ -1,6 +1,6 @@
 <?php
 	if (isset($_POST['submit'])) {
-		include("connection.php");
+		include("../config/connection.php");
 		$nama 			= $_POST['nama'];
 		$no_telepon = $_POST['no_telepon'];
     $alamat 	  = $_POST['alamat'];
@@ -12,7 +12,7 @@
     if (!mysqli_num_rows($query)) {
       $query = mysqli_query($connect, "INSERT INTO user (nama, no_telepon, alamat, username, password) VALUES ('$nama','$no_telepon','$alamat','$username','$password')");
 
-      header("Location:index.php");
+      header("Location:../public/login.php");
     }
 
 	}

@@ -1,6 +1,6 @@
 <?php
 	include 'header.php';
-	require_once 'functions/editPerusahaan.php';
+	require_once '../functions/editPerusahaan.php';
 ?>
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 	<div class="row">
@@ -18,14 +18,14 @@
 		<div class="col-md-12">
 			<div class="panel panel-default">
 				<div class="panel-body">
-					<form method="post" action="functions/editPerusahaan.php?id=<?= $_GET['id']?>">
+					<form method="post" action="../functions/editPerusahaan.php?id=<?= $_GET['id']?>">
 						<div class="form-group">
 							<div class="row">
 								<div class="col-md-2 text-right">
 									<label class="margin-4">Nama</label>
 								</div>
 								<div class="col-md-10">
-									<input class="form-control" name="nama" value="<?= $data['nama'] ?>">
+									<input class="form-control" name="nama" value="<?= $data['nama'] ?>" required>
 								</div>
 							</div>
             </div>
@@ -35,7 +35,7 @@
 									<label class="margin-4">Alamat</label>
 								</div>
 								<div class="col-md-10">
-									<input class="form-control" name="alamat" value="<?= $data['alamat'] ?>">
+									<input class="form-control" name="alamat" value="<?= $data['alamat'] ?>" required>
 								</div>
 							</div>
             </div>
@@ -45,7 +45,7 @@
 									<label class="margin-4">Status</label>
 								</div>
 								<div class="col-md-10">
-									<select class="form-control" name="status">
+									<select class="form-control" name="status" required>
 										<option value="" selected hidden>Pilih</option>
 										<option value="Swasta" <?= $data['status'] == "Swasta" ? 'selected' : '' ?>>Swasta</option>
 										<option value="BUMN" <?= $data['status'] == "BUMN" ? 'selected' : '' ?>>BUMN</option>
@@ -59,7 +59,7 @@
 									<label class="margin-4">Nomor Telepon</label>
 								</div>
 								<div class="col-md-10">
-									<input class="form-control" name="no_telepon" value="<?= $data['no_telepon'] ?>">
+									<input class="form-control" name="no_telepon" value="<?= $data['no_telepon'] ?>" required>
 								</div>
 							</div>
             </div>
@@ -69,7 +69,7 @@
 									<label class="margin-4">Keterangan</label>
 								</div>
 								<div class="col-md-10">
-									<textarea name="keterangan" rows="3" class="form-control"><?= $data['keterangan'] ?></textarea>
+									<textarea name="keterangan" rows="3" class="form-control" required><?= $data['keterangan'] ?></textarea>
 								</div>
 							</div>
             </div>
